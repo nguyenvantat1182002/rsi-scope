@@ -4,10 +4,11 @@ import MetaTrader5 as mt5
 
 
 class RSIDivergence:
-    def __init__(self, symbol: str, timeframe: int):
+    def __init__(self, symbol: str, timeframe: int, lookback: int = 200):
         self.symbol = symbol
         self.timeframe = timeframe
-
+        self.lookback = lookback
+        
     def create_market_struct(self, df: pd.DataFrame):
         df['pivot_type'] = 0
         df['pivot_index'] = 0
