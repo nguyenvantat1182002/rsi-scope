@@ -7,4 +7,8 @@ requires-python = ">=3.12"
 dependencies = [
     "metatrader5>=5.0.5328",
     "pandas>=2.3.3",
+    "ta-lib",
 ]
+
+[tool.uv.sources]
+ta-lib = { path = "ta_lib-0.6.7-cp312-cp312-win_amd64.whl" }
